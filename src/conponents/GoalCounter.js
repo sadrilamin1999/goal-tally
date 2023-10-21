@@ -1,5 +1,4 @@
 import { useState } from "react";
-import Buttton from "../utls/Buttton";
 
 const GoalCounter = () => {
   const [argCount, setArgCount] = useState(0);
@@ -23,6 +22,12 @@ const GoalCounter = () => {
   const decrementBraHandle = () => {
     setBraCount((prevbraCount) => prevbraCount - 1);
   };
+
+  // submit handler
+  const submitHandler = () => {
+    console.log("Clicked");
+  };
+
   return (
     <div className="counter p-14 flex flex-col gap-16">
       <h1 className="text-6xl font-semibold text-softLight tracking-wider">
@@ -72,7 +77,15 @@ const GoalCounter = () => {
             -
           </button>
         </div>
-        <Buttton text="Start" />
+        <div>
+          <button
+            type="submit"
+            onClick={submitHandler}
+            className="bg-green-600 hover:bg-green-500 duration-300 px-8 py-2 text-green-50 font-semibold tracking-widest text-xl rounded-md"
+          >
+            Submit
+          </button>
+        </div>
       </div>
     </div>
   );
