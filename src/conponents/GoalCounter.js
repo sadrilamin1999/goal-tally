@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import Result from "./Result";
 
 const GoalCounter = () => {
@@ -32,7 +32,7 @@ const GoalCounter = () => {
 
   return (
     <>
-      <div className="counter p-14 flex flex-col gap-16">
+      <div className="counter mx-auto w-[60%] h-[60%] p-14 flex flex-col rounded-md justify-center gap-16 border-solid border-1 bg-softDark border-purple-600 absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%]">
         <h1 className="text-6xl font-semibold text-softLight tracking-wider">
           Make Goal
         </h1>
